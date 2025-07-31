@@ -7,7 +7,7 @@ const AuthLayout = () => {
     return (
         <div>
             <header>
-                {/* <Navbar></Navbar> */}
+                <Navbar></Navbar>
             </header>
             <Toaster position="top-right" reverseOrder={false} />
             <main>

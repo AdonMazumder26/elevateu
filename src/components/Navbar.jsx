@@ -1,11 +1,12 @@
 
-import { Link } from 'react-router-dom';
+import { Link, useLocation } from 'react-router-dom';
 import { useContext } from 'react';
 import { AuthContext } from '../provider/AuthProvider';
 
 export default function Navbar() {
 
     const { user, logOut } = useContext(AuthContext);
+    const location = useLocation();
 
     // const photoURL = user?.photoURL;
     // console.log(photoURL);
@@ -45,19 +46,33 @@ export default function Navbar() {
             <div className="flex items-center gap-4">
                 {/* <ThemeToggle /> */}
                 {
-                    user && user?.photoURL ? (<div className='flex gap-3'>
+                    user && user?.photoURL && <div className='flex gap-3'>
                         <button className="bg-indigo-600 hover:bg-indigo-700 text-white px-4 py-2 rounded-md text-sm font-semibold transition" onClick={logOut}>Log out</button>
                         <img className='w-10 h-10 rounded-full' title={user?.displayName} src={user?.photoURL}></img>
-                    </div>) : (
-
+                    </div>
+                }
+                {
+                    !user && location.pathname !== '/auth/login' && (
                         <Link
                             to="auth/login"
                             className="bg-indigo-600 hover:bg-indigo-700 text-white px-4 py-2 rounded-md text-sm font-semibold transition"
                         >
                             Log in
-                        </Link>)
+                        </Link>
+                    )
+                }
+                {
+                    !user && location.pathname === '/auth/login' && (
+                        <Link
+                            to="/"
+                            className="bg-indigo-600 hover:bg-indigo-700 text-white px-4 py-2 rounded-md text-sm font-semibold transition"
+                        >
+                            Home
+                        </Link>
+                    )
                 }
             </div>
         </nav>
     );
 }
+
