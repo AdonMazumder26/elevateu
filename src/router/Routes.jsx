@@ -10,6 +10,7 @@ import PrivateRoutes from "./PrivateRoutes";
 import ServiceDetails from "../pages/ServiceDetails";
 import { ServiceLoader } from "../LoaderFunctions.jsx/ServiceLoader";
 import Profile from "../pages/Profile";
+import Dashboard from "../pages/Dashboard";
 
 const router = createBrowserRouter([
     {
@@ -29,6 +30,14 @@ const router = createBrowserRouter([
                 element: (
                     <PrivateRoutes>
                         <Profile></Profile>
+                    </PrivateRoutes>
+                )
+            },
+            {
+                path: '/dashboard',
+                element: (
+                    <PrivateRoutes>
+                        <Dashboard></Dashboard>
                     </PrivateRoutes>
                 )
             }

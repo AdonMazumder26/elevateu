@@ -25,6 +25,8 @@ export default function Navbar() {
                         <li><Link to="/success" className="hover:text-indigo-600">Success</Link></li>
                         <li><Link to="/contact" className="hover:text-indigo-600">Contact</Link></li>
                         <li><Link to="/profile" className="hover:text-indigo-600">Profile</Link></li>
+                        <li><Link to="/dashboard" className="hover:text-indigo-600">Dashboard</Link></li>
+
 
                     </ul>
                 )
