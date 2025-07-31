@@ -1,0 +1,69 @@
+[
+    {
+      "id": "srv001",
+      "image": "https://i.ibb.co/whv5wYjy/career-Test.jpg",
+      "serviceName": "Career Assessment Test",
+      "serviceCategory": "online",
+      "description": "Discover your strengths, interests, and ideal career paths with our AI-powered assessment.",
+      "pricing": "৳500",
+      "duration": "30 minutes | Available Anytime",
+      "counselor": "Nusrat Jahan (Certified Career Coach)",
+      "rating": 4.8
+    },
+    {
+      "id": "srv002",
+      "image": "https://i.ibb.co/chjsWn8k/oneOnOne.jpg",
+      "serviceName": "One-on-One Career Counseling",
+      "serviceCategory": "offline",
+      "description": "Personalized session to guide your academic or career choices with an expert counselor.",
+      "pricing": "৳1200",
+      "duration": "60 minutes | 2025-08-05",
+      "counselor": "Md. Arif Rahman (MSc Psychology)",
+      "rating": 4.9
+    },
+    {
+      "id": "srv003",
+      "image": "https://i.ibb.co/0R5CYwqX/group-Workshop.jpg",
+      "serviceName": "Group Career Workshop",
+      "serviceCategory": "group",
+      "description": "Interactive group session focusing on career planning, resume tips, and industry insights.",
+      "pricing": "৳300 per person",
+      "duration": "90 minutes | 2025-08-10",
+      "counselor": "Farzana Ahmed (HR Specialist, Grameenphone)",
+      "rating": 4.6
+    },
+    {
+      "id": "srv004",
+      "image": "https://i.ibb.co/Zpm1zLvh/interview.jpg",
+      "serviceName": "Mock Interview Session",
+      "serviceCategory": "online",
+      "description": "Practice real interview scenarios and get actionable feedback to boost confidence.",
+      "pricing": "৳800",
+      "duration": "45 minutes | 2025-08-03",
+      "counselor": "Samiul Hasan (Corporate Coach, bKash)",
+      "rating": 4.7
+    },
+    {
+      "id": "srv005",
+      "image": "https://i.ibb.co/wZzch6Y8/resume.jpg",
+      "serviceName": "Resume & Portfolio Building",
+      "serviceCategory": "online",
+      "description": "Create a professional resume and digital portfolio tailored to your dream job.",
+      "pricing": "৳1000",
+      "duration": "2 Days | Flexible Schedule",
+      "counselor": "Jannat Tuli (Career Strategist)",
+      "rating": 4.9
+    },
+    {
+      "id": "srv006",
+      "image": "https://i.ibb.co/0jGsxpPg/study-Abroad.jpg",
+      "serviceName": "Study Abroad Guidance",
+      "serviceCategory": "offline",
+      "description": "Complete support on university selection, SOP writing, and visa process for studying abroad.",
+      "pricing": "৳2000",
+      "duration": "75 minutes | 2025-08-07",
+      "counselor": "Tanvir Islam (Global Admissions Expert)",
+      "rating": 4.85
+    }
+  ]
+  
