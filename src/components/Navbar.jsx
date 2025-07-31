@@ -21,10 +21,10 @@ export default function Navbar() {
                 user ? (
                     <ul className="hidden md:flex gap-6 text-gray-700 dark:text-gray-200 font-medium">
                         <li><Link to="/" className="hover:text-indigo-600">Home</Link></li>
-                        <li><Link to="/about" className="hover:text-indigo-600">About</Link></li>
+                        {/* <li><Link to="/about" className="hover:text-indigo-600">About</Link></li>
                         <li><Link to="/quiz" className="hover:text-indigo-600">Quiz</Link></li>
                         <li><Link to="/success" className="hover:text-indigo-600">Success</Link></li>
-                        <li><Link to="/contact" className="hover:text-indigo-600">Contact</Link></li>
+                        <li><Link to="/contact" className="hover:text-indigo-600">Contact</Link></li> */}
                         <li><Link to="/profile" className="hover:text-indigo-600">Profile</Link></li>
                         <li><Link to="/dashboard" className="hover:text-indigo-600">Dashboard</Link></li>
 
@@ -34,10 +34,10 @@ export default function Navbar() {
                     :
                     (<ul className="hidden md:flex gap-6 text-gray-700 dark:text-gray-200 font-medium">
                         <li><Link to="/" className="hover:text-indigo-600">Home</Link></li>
-                        <li><Link to="/about" className="hover:text-indigo-600">About</Link></li>
+                        {/* <li><Link to="/about" className="hover:text-indigo-600">About</Link></li>
                         <li><Link to="/quiz" className="hover:text-indigo-600">Quiz</Link></li>
                         <li><Link to="/success" className="hover:text-indigo-600">Success</Link></li>
-                        <li><Link to="/contact" className="hover:text-indigo-600">Contact</Link></li>
+                        <li><Link to="/contact" className="hover:text-indigo-600">Contact</Link></li> */}
                     </ul>)
 
             }
