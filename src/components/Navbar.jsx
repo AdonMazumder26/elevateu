@@ -52,7 +52,7 @@ export default function Navbar() {
                     </div>
                 }
                 {
-                    !user && location.pathname !== '/auth/login' && (
+                    !user && location.pathname !== '/auth/login' && location.pathname !== '/auth/register' && (
                         <Link
                             to="auth/login"
                             className="bg-indigo-600 hover:bg-indigo-700 text-white px-4 py-2 rounded-md text-sm font-semibold transition"
@@ -71,6 +71,17 @@ export default function Navbar() {
                         </Link>
                     )
                 }
+                {
+                    !user && location.pathname === '/auth/register' && (
+                        <Link
+                            to="/"
+                            className="bg-indigo-600 hover:bg-indigo-700 text-white px-4 py-2 rounded-md text-sm font-semibold transition"
+                        >
+                            Home
+                        </Link>
+                    )
+                }
+
             </div>
         </nav>
     );

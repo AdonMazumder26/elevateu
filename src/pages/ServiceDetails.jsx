@@ -1,5 +1,6 @@
 import { Link, useParams } from 'react-router-dom';
 import serviceData from '../data/services.json';
+import FeedbackSection from '../components/FeedbackSection';
 
 const ServiceDetails = () => {
     const { id } = useParams();
@@ -58,6 +59,7 @@ const ServiceDetails = () => {
                     </div>
 
                 </div>
+                <FeedbackSection></FeedbackSection>
                 <div className="p-4 bg-gray-50 rounded-lg shadow-sm">
                     <Link to='/' className='btn w-full btn-primary'>Return to Home</Link>
                 </div>
