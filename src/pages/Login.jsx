@@ -1,6 +1,6 @@
 // src/components/Login.jsx
 import React, { useContext } from 'react';
-import { Link, useLocation, useNavigate } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import { FcGoogle } from 'react-icons/fc'; // Optional: for Google icon
 import toast from 'react-hot-toast';
 import { AuthContext } from '../provider/AuthProvider';
@@ -13,7 +13,7 @@ const Login = () => {
     const { logIn, setUser } = useContext(AuthContext);
     const navigate = useNavigate();
 
-    const location = useLocation();
+    // const location = useLocation();
 
     const handleLogin = (e) => {
         e.preventDefault();
@@ -26,11 +26,11 @@ const Login = () => {
                 const user = result.user;
                 setUser(user);
                 navigate('/');
-                console.log(location);
+                // console.log(location);
                 toast.success("Successfully logged in", { duration: 3000 });
             })
             .catch((err) => {
-                console.log(err);
+                toast.error(err);
             })
 
         // Example error validation
@@ -61,7 +61,7 @@ const Login = () => {
 
             })
             .catch(err => {
-                console.log(err);
+                toast.error(err);
             })
     };
 

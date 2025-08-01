@@ -33,8 +33,8 @@ const ForgotPass = () => {
                 window.location.href = "https://mail.google.com/";
             }, 2000);
         } catch (error) {
-            console.error(error.message);
-            toast.error("Failed to send reset email.");
+
+            toast.error("Failed to send reset email.", error);
         }
     };
 

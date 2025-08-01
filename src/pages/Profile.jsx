@@ -2,6 +2,7 @@ import { useContext, useState } from "react";
 // import { getAuth, updateProfile } from "firebase/auth";
 // import { auth } from "../firebase"; // Adjust the path based on your setup
 import { AuthContext } from "../provider/AuthProvider";
+import toast from "react-hot-toast";
 // import app from "../firebase.config";
 
 const Profile = () => {
@@ -26,7 +27,7 @@ const Profile = () => {
             })
             .catch((error) => {
                 setMessage("Error updating profile.");
-                console.error(error);
+                toast.error(error);
             });
     };
 
