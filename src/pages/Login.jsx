@@ -12,12 +12,14 @@ const Login = () => {
 
     const { logIn, setUser } = useContext(AuthContext);
     const navigate = useNavigate();
+
     const location = useLocation();
 
     const handleLogin = (e) => {
         e.preventDefault();
         const email = e.target.email.value.trim();
         const password = e.target.password.value.trim();
+
 
         logIn(email, password)
             .then(result => {
@@ -63,6 +65,7 @@ const Login = () => {
             })
     };
 
+
     return (
         <>
             <Helmet>
@@ -103,9 +106,9 @@ const Login = () => {
                             />
                         </div>
                         <div className="text-right mt-1">
-                            <a href="/forgot-password" className="text-sm text-blue-600 hover:underline">
+                            <Link to='/auth/forgotPass' className="text-sm text-blue-600 hover:underline">
                                 Forgot Password?
-                            </a>
+                            </Link>
                         </div>
 
                         {/* Submit Button */}

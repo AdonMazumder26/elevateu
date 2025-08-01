@@ -10,6 +10,7 @@ import ServiceDetails from "../pages/ServiceDetails";
 import { ServiceLoader } from "../LoaderFunctions.jsx/ServiceLoader";
 import Profile from "../pages/Profile";
 import Dashboard from "../pages/Dashboard";
+import ForgotPass from "../pages/ForgotPass";
 
 const router = createBrowserRouter([
     {
@@ -60,6 +61,10 @@ const router = createBrowserRouter([
             {
                 path: '/auth/register',
                 element: <Register></Register>
+            },
+            {
+                path: '/auth/forgotPass',
+                element: <ForgotPass></ForgotPass>
             }
         ]
     },

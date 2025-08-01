@@ -37,7 +37,8 @@ const AuthProvider = ({ children }) => {
         logIn,
         logOut,
         updateUserProfile,
-        loading
+        loading,
+        setLoading
     }
 
     useEffect(() => {

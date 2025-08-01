@@ -5,11 +5,13 @@ import toast from 'react-hot-toast';
 import { AuthContext } from '../provider/AuthProvider';
 import { Helmet } from 'react-helmet-async';
 import { FaEye, FaEyeSlash } from 'react-icons/fa';
+import { getAuth, GoogleAuthProvider, signInWithPopup } from "firebase/auth";
+
 
 const Register = () => {
     const navigate = useNavigate();
 
-    const { createUser, updateUserProfile } = useContext(AuthContext);
+    const { createUser, updateUserProfile, setUser } = useContext(AuthContext);
     const [showPassword, setShowPassword] = useState(false);
 
 
@@ -27,6 +29,7 @@ const Register = () => {
                 console.log(user);
                 updateUserProfile({ displayName: name, photoURL: photoURL })
                     .then(() => {
+
                         navigate('/');
                     })
                     .catch((err) => {
@@ -54,9 +57,26 @@ const Register = () => {
         // toast.success('Registered successfully (simulation)');
     };
 
+
+    const provider = new GoogleAuthProvider();
+    const auth = getAuth();
+
     const handleGoogleRegister = () => {
         // Simulate Google login error
-        toast.error('Google login failed (not implemented)');
+        // toast.error('Google login failed (not implemented)');
+        signInWithPopup(auth, provider)
+            .then(result => {
+                const user = result.user;
+                setUser(user);
+                setTimeout(() => {
+                    navigate('/');
+                }, 3000);
+                toast.success("Successfully logged in", { duration: 3000 });
+
+            })
+            .catch(err => {
+                console.log(err);
+            })
     };
 
     return (
@@ -145,7 +165,7 @@ const Register = () => {
 
                     <button
                         onClick={handleGoogleRegister}
-                        className="w-full flex items-center justify-center gap-2 border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-700 text-gray-700 dark:text-white px-4 py-2 rounded-lg hover:shadow-md transition"
+                        className="w-full flex items-center opacity-85 hover:opacity-100  justify-center gap-2 border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-700 text-gray-700 dark:text-white px-4 py-2 rounded-lg hover:shadow-xl transition"
                     >
                         <FcGoogle size={20} />
                         Continue with Google
